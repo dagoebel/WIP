@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C54" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="WIPViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" image="wooden_top.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="FyB-Xl-y6y">
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWe-Ig-6Sa">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yB1-SS-aVr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="mON-4f-Q1q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="spinbottle:" destination="2" eventType="touchDown" id="cEF-zE-AJg"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lob-Vm-qVT">
+                                <color key="backgroundColor" red="0.84705889229999998" green="0.64313727620000005" blue="0.4274510145" alpha="1" colorSpace="deviceRGB"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="bkY-Kf-hpi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="596" id="jX5-mt-8hE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="2" eventType="valueChanged" id="In8-7w-qcy"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="compass.png" translatesAutoresizingMaskIntoConstraints="NO" id="UaL-16-tpl">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="700" id="Mko-NP-ia2"/>
+                                    <constraint firstAttribute="width" constant="700" id="UWU-zS-uTp"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0kn-Dc-Mtz" appends="YES" id="CxA-DN-N1F"/>
+                                </connections>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="CCy-5w-84S">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="HZR-zC-Xdh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="rotateCompass:" destination="2" eventType="valueChanged" id="5fc-9Z-Zat"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="FPA-J7-M3s">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="pAE-Zl-HjK"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="rotateBoth:" destination="2" eventType="valueChanged" id="dVo-nx-F6K"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Xante%20Bottle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ox8-ik-5Qz">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Yxx-jf-5tX"/>
+                                    <constraint firstAttribute="width" constant="240" id="gw0-Lh-DLv"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KvF-dJ-nWw" appends="YES" id="Ss8-iC-B8c"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Lob-Vm-qVT" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="374" id="069-RB-NkG"/>
+                            <constraint firstAttribute="trailing" secondItem="qWe-Ig-6Sa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="291-8p-FcV"/>
+                            <constraint firstItem="Ox8-ik-5Qz" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="113" id="2xi-q9-tKq"/>
+                            <constraint firstItem="Lob-Vm-qVT" firstAttribute="centerX" secondItem="UaL-16-tpl" secondAttribute="centerX" type="default" id="8zz-Ec-8qe"/>
+                            <constraint firstAttribute="bottom" secondItem="bkY-Kf-hpi" secondAttribute="bottom" constant="94" id="CZE-yp-fYa"/>
+                            <constraint firstItem="FyB-Xl-y6y" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="NJJ-Th-KRT"/>
+                            <constraint firstItem="UaL-16-tpl" firstAttribute="centerY" secondItem="Lob-Vm-qVT" secondAttribute="centerY" type="default" id="PQl-ND-6kH"/>
+                            <constraint firstItem="CCy-5w-84S" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="298" id="Pv4-pL-Y9o"/>
+                            <constraint firstItem="Ox8-ik-5Qz" firstAttribute="top" secondItem="5" secondAttribute="top" constant="38" id="QP4-xw-wd2"/>
+                            <constraint firstAttribute="trailing" secondItem="FPA-J7-M3s" secondAttribute="trailing" constant="183" id="Xik-UJ-TCl"/>
+                            <constraint firstItem="Lob-Vm-qVT" firstAttribute="centerY" secondItem="FyB-Xl-y6y" secondAttribute="centerY" type="default" id="cZp-zh-eEu"/>
+                            <constraint firstItem="yB1-SS-aVr" firstAttribute="bottom" secondItem="qWe-Ig-6Sa" secondAttribute="bottom" type="default" id="dEN-g6-7Qn"/>
+                            <constraint firstItem="FyB-Xl-y6y" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="dOx-SQ-IjC"/>
+                            <constraint firstItem="CCy-5w-84S" firstAttribute="top" secondItem="5" secondAttribute="top" constant="46" id="elc-au-f4s"/>
+                            <constraint firstItem="qWe-Ig-6Sa" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gJG-7K-gQq"/>
+                            <constraint firstItem="Lob-Vm-qVT" firstAttribute="centerX" secondItem="FyB-Xl-y6y" secondAttribute="centerX" type="default" id="hga-Ri-K4k"/>
+                            <constraint firstItem="FyB-Xl-y6y" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="jxu-73-5hM"/>
+                            <constraint firstItem="FPA-J7-M3s" firstAttribute="top" secondItem="CCy-5w-84S" secondAttribute="top" type="default" id="k2X-U5-lXc"/>
+                            <constraint firstItem="Ox8-ik-5Qz" firstAttribute="leading" secondItem="bkY-Kf-hpi" secondAttribute="leading" type="default" id="l9C-Pv-gDl"/>
+                            <constraint firstItem="yB1-SS-aVr" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="n6T-ap-EEr"/>
+                            <constraint firstItem="yB1-SS-aVr" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="pM4-uk-3uI"/>
+                            <constraint firstItem="Lob-Vm-qVT" firstAttribute="top" secondItem="5" secondAttribute="top" constant="402" id="wwX-XJ-9Fj"/>
+                            <constraint firstItem="FyB-Xl-y6y" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="ywK-Lo-GCW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="compass" destination="UaL-16-tpl" id="Mpe-FY-E8X"/>
+                        <outlet property="needle" destination="Lob-Vm-qVT" id="PLW-Ti-7HD"/>
+                        <outlet property="table" destination="FyB-Xl-y6y" id="Zg2-QA-1ko"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0kn-Dc-Mtz">
+                    <connections>
+                        <action selector="singleTap:" destination="2" id="Ebl-V9-0hj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="KvF-dJ-nWw">
+                    <connections>
+                        <action selector="klickAufFlasche:" destination="2" id="rIk-LD-7J5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-44" y="-101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Xante%20Bottle.png" width="1049" height="1049"/>
+        <image name="compass.png" width="1100" height="1100"/>
+        <image name="wooden_top.jpeg" width="1440" height="900"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WIPViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WIPViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="klickAufFlasche:"/>
+                <relationship kind="action" name="rotateCompass:"/>
+                <relationship kind="action" name="singleTap:"/>
+                <relationship kind="action" name="sliderValueChanged:"/>
+                <relationship kind="action" name="spinbottle:"/>
+                <relationship kind="outlet" name="bottle" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="compass" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="needle" candidateClass="UIView"/>
+                <relationship kind="outlet" name="table" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
